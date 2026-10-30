@@ -1,0 +1,29 @@
+Crea un script llamado “gestor_prioridades_AAM.sh” (Con tus iniciales) que automatice la gestión
+de prioridades de procesos en el sistema a partir de un archivo CSV.
+El archivo tendrá el siguiente formato (separado por comas):
+
+nombre_programa , valor_nice
+Ejemplo:
+firefox,5
+gedit,-10
+gimp,0
+
+Para cada línea del archivo CSV, el script debe verificar si hay algún proceso en ejecución con el
+nombre exacto del programa.
+
+Caso A - El proceso existe:
+
+    Cambiar la prioridad de ese proceso al valor especificado en el CSV.
+
+Caso B - El proceso NO existe:
+
+    Iniciar una instancia del programa en segundo plano con la prioridad indicada
+
+
+El script debe comprobar que el archivo existe antes de procesarlo.
+Al finalizar, mostrar un resumen indicando para cada programa:
+
+    Si existía: "Proceso X (PID) - nice cambiado a Y"
+    Si se inició: "Proceso X (PID) - nuevo proceso con nice Y"
+    Si hubo error: "Proceso X - ERROR: (motivo)"
+
