@@ -1,0 +1,82 @@
+1. En Github creamos los repositorios. 
+    - Nombre
+    - Descripción
+    - Choose visibility --> Public
+    - Add README --> off
+    - Add .gitignore --> No .gitignore
+    - Add license --> No license
+
+2. Creamos Tokens para cuando iniciemos sesion en Github a traves de terminal.
+    - Click en tu foto de perfil
+    - Click en settings/configuración
+    - En el navegador izquierdo --> Credentials
+    - Click en Fine-grained personal access tokens
+    - Click en generate nwe token --> 
+    [Nombre, Descripción, Resource owner(Tu uduario), Expiration(90 days), 
+    Repository access(Only select repositories --> selecciona el repositorio creado), 
+    Permissions(Add permissions --> Contents --> cambiamos "Read-only" a "Read and    write")].
+
+2. Pasamos a la terminal y vamos al directorio que queremos subir.
+
+3. inicializamos github en terminal.
+    - git init
+
+4. Cargamos o añadimos lo que haya en el directorio en el que estamos.
+    - git add .
+
+5. Iniciamos sesion en Github a traves de terminal.
+    - git config --global user.name "TuNombre"
+    - git config --global user.email "tu-correo@gmail.com"
+
+6. Creamos un commit /comentario para los ficheros para buena praxis y estetica.
+    - git commit -m "(Comentario que desees)"
+
+7. Vamos a Github, entramos en el repositorio creado.
+    - presionamos "<> Code"
+    - HTTPS --> copiamos el enlace "https://github.com/(Usuario)/(repositorio).git"
+
+8. Conectamos nuetro directorio local con el repositorio de Github.
+    - git remote add origin "https://github.com/(Usuario)/(repositorio).git"
+
+9. Establecemos la rama principal como "main".
+    - git branch -M main
+
+10. Subimos el contenido del directorio en el que nos encontramos.
+    - git push -u origin main
+    - [Nos pedira Nombre del Usuario de github y Contraseña(Es el texto que se genera que puedes copiar al crear los tokens)].
+
+11. Vemos que se ha subido a Github.
+    - git remote -v
+
+===============================================================================================================================================
+                                              PARA FUTURAS ACTUALIZACIONES DE MAQUINA LOCAL A GITHUB
+===============================================================================================================================================
+Solo tendremos que hacer para actualizar y añadir el contenido a los reposiorios sin borrar lo que ya esta:
+1. Nos situamos en el directorio del contenido que deseamos añadir o actualizar.
+
+2. git add .
+
+3. git commit -m "(Comentario que desees)" --> Solo lo aplica a los archivos que se suben por primera vez.
+
+4. git push
+
+===============================================================================================================================================
+                                                       DESCARGAR REPOSITORIO DE GITHUB A MI MAQUINA LOCAL 
+===============================================================================================================================================
+1. Vamos al directorio donde lo queremos descargar.
+
+2. Vamos a Github.
+    - Click en el repositorio que nos interesa
+    - presionamos "<> Code"
+    - HTTPS --> copiamos el enlace "https://github.com/(Usuario)/(repositorio).git]"
+
+3. En la terminal ejecutamos dentro del directorio todavia.
+    - git clone [https://github.com/(Usuario)/(repositorio).git]
+
+===============================================================================================================================================
+                                              PARA FUTURAS ACTUALIZACIONES DE GITHUB A MAQUINA LOCAL 
+===============================================================================================================================================
+1. Vamos al directorio donde descargamos el contenido proviniente de Github.
+
+2. git pull
+
